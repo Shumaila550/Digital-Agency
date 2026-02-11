@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <head>
     <meta charset="UTF-8">
     <title>CareTech Hospital ERP System</title>
 
@@ -177,32 +176,36 @@
         }
 
         table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
+       /* TABLE STYLING */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-/* Mobile Table Fix */
-    .table-responsive {
-        width: 100%;
-       overflow-x: auto;
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
 }
 
- table {
-      min-width: 600px;
+th {
+    background: var(--primary);
+    color: white;
+    padding: 12px;
 }
 
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
 
-        th {
-            background: var(--primary);
-            color: white;
-            padding: 12px;
-        }
-
-        td {
-            padding: 12px;
-            border-bottom: 1px solid #ddd;
-        }
+/* Mobile improvement */
+@media (max-width: 768px) {
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
 
         /* FOOTER */
         footer {
