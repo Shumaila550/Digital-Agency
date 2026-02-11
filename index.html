@@ -69,13 +69,16 @@
     text-align: center;
     color: white;
 }
-
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(13, 110, 253, 0.45); /* LIGHT overlay */
+    background: linear-gradient(
+        rgba(13,110,253,0.55),
+        rgba(13,110,253,0.35)
+    );
 }
+
 
 .hero .container {
     position: relative;
@@ -83,16 +86,20 @@
 }
 
 .hero h2 {
-    font-size: 40px;
+    font-size: 42px;
     font-weight: 700;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+    color: #ffffff;                 /* PURE WHITE */
+    text-shadow: 0 4px 12px rgba(0,0,0,0.65); /* STRONG clarity */
+    margin-bottom: 12px;
 }
+
 
 .hero p {
     font-size: 18px;
     max-width: 720px;
     margin: 15px auto 0;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    color: #f8f9fa;                  /* Soft white */
+    text-shadow: 0 3px 10px rgba(0,0,0,0.6);
 }
 
 
