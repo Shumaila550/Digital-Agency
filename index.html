@@ -1,94 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>CareTech Hospital ERP System</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CareTech Hospital ERP System</title>
 
-    <meta name="description" content="CareTech Hospital ERP System - Modern hospital management software for patients, billing, pharmacy, inventory and administration.">
-    <meta name="keywords" content="Hospital ERP, Hospital Management System, CareTech, Medical Software">
-    <meta name="author" content="CareTech Hospital">
-    <meta property="og:title" content="CareTech Hospital ERP System">
-    <meta property="og:description" content="Professional hospital ERP management software">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CareTech Hospital ERP System - Modern hospital management software.">
 
-</head>
+<link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
 
-    <!-- GOOGLE FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+:root {
+    --primary: #0d6efd;
+    --secondary: #20c997;
+    --light-bg: #f4f8fb;
+    --dark: #212529;
+}
 
-    <style>
-        :root {
-            --primary: #0d6efd;
-            --secondary: #20c997;
-            --light-bg: #f4f8fb;
-            --dark: #212529;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        * {
-            box-sizing: border-box;
-        }
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--light-bg);
+    color: var(--dark);
+    line-height: 1.6;
+}
 
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: var(--light-bg);
-            color: var(--dark);
-        }
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
 
-        .container {
-            width: 90%;
-            margin: auto;
-        }
+/* ================= HEADER ================= */
 
-        /* HEADER */
-        header {
-            background: var(--primary);
-            color: white;
-            padding: 15px 0;
-        }
+header {
+    background: var(--primary);
+    color: white;
+    padding: 15px 0;
+}
 
-        header h1 {
-            margin: 0;
-            display: inline-block;
-        }
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-        nav {
-            float: right;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 15px;
-            font-weight: 500;
-        }
+nav a.btn {
+    background: var(--secondary);
+    padding: 8px 14px;
+    border-radius: 5px;
+}
 
-        nav a.btn {
-            background: var(--secondary);
-            padding: 8px 14px;
-            border-radius: 4px;
-        }
+/* ================= HERO ================= */
 
-        /* HERO */
-        .hero {
+.hero {
     position: relative;
     background: url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3") center/cover no-repeat;
-    padding: 110px 0;
+    padding: 120px 0;
     text-align: center;
     color: white;
 }
+
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        rgba(13,110,253,0.55),
-        rgba(13,110,253,0.35)
-    );
+    background: rgba(13,110,253,0.55);
 }
-
 
 .hero .container {
     position: relative;
@@ -97,95 +89,82 @@
 
 .hero h2 {
     font-size: 42px;
-    font-weight: 700;
-    color: #ffffff;                 /* PURE WHITE */
-    text-shadow: 0 4px 12px rgba(0,0,0,0.65); /* STRONG clarity */
-    margin-bottom: 12px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.7);
 }
-
 
 .hero p {
+    margin-top: 15px;
     font-size: 18px;
-    max-width: 720px;
-    margin: 15px auto 0;
-    color: #f8f9fa;                  /* Soft white */
-    text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
-        .hero h2 {
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            max-width: 700px;
-            margin: auto;
-        }
-
-        .hero .btn {
-            display: inline-block;
-            margin-top: 20px;
-            background: var(--secondary);
-            padding: 12px 22px;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        /* SECTIONS */
-        section {
-            padding: 60px 0;
-        }
-
-        section h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: var(--primary);
-        }
-
-        /* CARDS */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            text-align: center;
-            font-size: 16px;
-        }
-
-        .card span {
-            font-size: 36px;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        /* ERP DASHBOARD */
-        .dashboard {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-        }
-
-        table {
-       /* TABLE STYLING */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+.hero .btn {
+    display: inline-block;
+    margin-top: 25px;
+    background: var(--secondary);
+    padding: 12px 24px;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
 }
+
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 70px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary);
+}
+
+/* ================= GRID CARDS ================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.card span {
+    font-size: 36px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* ================= DASHBOARD ================= */
+
+.dashboard {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 30px;
+}
+
+/* TABLE */
 
 .table-responsive {
     width: 100%;
     overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
 }
 
 th {
@@ -199,37 +178,46 @@ td {
     border-bottom: 1px solid #ddd;
 }
 
-/* Mobile improvement */
+/* ================= FOOTER ================= */
+
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 768px) {
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin-left: 10px;
+        display: inline-block;
+        margin-top: 8px;
+    }
+
     th, td {
         padding: 8px;
         font-size: 14px;
     }
 }
 
-        /* FOOTER */
-        footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            nav {
-                float: none;
-                margin-top: 10px;
-            }
-        }
-    </style>
+</style>
 </head>
+
 <body>
 
-<!-- HEADER -->
 <header>
-    <div class="container">
+    <div class="container header-flex">
         <h1>CareTech Hospital</h1>
         <nav>
             <a href="#about">About</a>
@@ -240,109 +228,32 @@ td {
     </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
     <div class="container">
         <h2>Hospital ERP Management System</h2>
         <p>
-            CareTech Hospital ERP is a modern hospital management system
-            designed to manage patients, doctors, billing, pharmacy,
-            inventory, and hospital operations efficiently.
+            Modern hospital management system to manage patients, doctors,
+            billing, pharmacy, inventory and operations efficiently.
         </p>
         <a href="#erp" class="btn">View ERP Dashboard</a>
     </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
     <div class="container">
-        <h2>About CareTech Hospital</h2>
+        <h2>About CareTech</h2>
         <p style="text-align:center; max-width:800px; margin:auto;">
-            CareTech Hospital is a technology-driven healthcare organization
-            providing high-quality medical services. Our ERP system integrates
-            all hospital departments into a single secure platform.
+            CareTech integrates all hospital departments into one secure ERP system
+            for efficient healthcare management.
         </p>
     </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services">
     <div class="container">
         <h2>Hospital Services</h2>
         <div class="grid">
-            <div class="card"><span>🧑‍⚕️</span>Outpatient Department</div>
-            <div class="card"><span>🏥</span>Inpatient Services</div>
-            <div class="card"><span>💊</span>Pharmacy Management</div>
-            <div class="card"><span>🧪</span>Laboratory Services</div>
-            <div class="card"><span>💳</span>Billing & Finance</div>
-            <div class="card"><span>📦</span>Inventory Control</div>
-        </div>
-    </div>
-</section>
-
-<!-- ERP DASHBOARD -->
-<section id="erp">
-    <div class="container">
-        <h2>ERP Dashboard (Demo)</h2>
-
-        <div class="grid">
-            <div class="card"><span>🧑‍⚕️</span>Total Patients<br><strong>1,248</strong></div>
-            <div class="card"><span>👨‍⚕️</span>Doctors<br><strong>56</strong></div>
-            <div class="card"><span>🏥</span>Departments<br><strong>12</strong></div>
-            <div class="card"><span>💰</span>Daily Revenue<br><strong>$18,400</strong></div>
-        </div>
-
-        <div class="dashboard">
-    <h3>Recent Patients</h3>
-
-    <div class="table-responsive">
-        <table>
-   
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Department</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>101</td>
-                    <td>Ali Khan</td>
-                    <td>Cardiology</td>
-                    <td>Admitted</td>
-                </tr>
-                <tr>
-                    <td>102</td>
-                    <td>Sara Ahmed</td>
-                    <td>Neurology</td>
-                    <td>Discharged</td>
-                </tr>
-                <tr>
-                    <td>103</td>
-                    <td>Usman Malik</td>
-                    <td>Orthopedics</td>
-                    <td>Under Treatment</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <p style="text-align:center;">
-            📍 CareTech Hospital, Pakistan<br>
-            📞 +92 300 1234567<br>
-            ✉️ info@caretechhospital.com
-        </p>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 CareTech Hospital ERP System | All Rights Reserved</p>
-</footer>
-
-</body>
-</html>
+            <div class="card"><span>🧑‍⚕️</span>Outpatient</div>
+            <div class="card"><span>🏥</span>Inpatient</div>
+            <div class="card"><span>💊</span>Pharmacy</div>
+            <div class="card"><span>🧪</
