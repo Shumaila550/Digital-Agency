@@ -177,10 +177,21 @@
         }
 
         table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+}
+
+/* Mobile Table Fix */
+    .table-responsive {
+        width: 100%;
+       overflow-x: auto;
+}
+
+ table {
+      min-width: 600px;
+}
+
 
         th {
             background: var(--primary);
